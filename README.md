@@ -1,4 +1,2 @@
 # Klangbox
-Plays different sounds due to movement recognition
-
-ESP32
+The sound box allows you to play different sounds (MP3). When the infrared sensor detects motion, a sound is played. All sounds are stored in the file system of the ESP32. After switching on, an access point is provided via which you can upload new software or new sounds to the sound box. After the access point is closed, the ESP32 goes into deep sleep mode in which it only needs 70μA. Through motion detection, the ESP32 wakes up and plays one of the sounds and then goes back into deep sleep.
