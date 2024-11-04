@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "ESP32_mini")(type "KiCad")(uri "${ADDL_FOOTPRINTS}/ESP32_mini_KiCad_Library/ESP32_mini.kicad_sym")(options "")(descr ""))
+  (lib (name "TP4056")(type "KiCad")(uri "${ADDL_FOOTPRINTS}/symbols/TP4056.kicad_sym")(options "")(descr ""))
+)

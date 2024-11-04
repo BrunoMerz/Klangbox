@@ -244,7 +244,7 @@ String getFilelist() {
 String processor(const String& var){
   Serial.println(var);
   if(var == "VERSION"){
-    return "1.6";
+    return "1.7";
   }
   if(var == "BATTERIE"){
     return String(getBatterie());
@@ -261,6 +261,8 @@ String processor(const String& var){
 // Initial Setup
 void setup()
 {
+  WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0); //disable brownout detector   
+
 #ifdef TST
   Serial.begin(115200);
   while (!Serial)
@@ -279,7 +281,7 @@ void setup()
   pinMode(VOLUME,INPUT);
   pinMode(BATTERIE,INPUT);
 
-  if(getBatterie() < 2.5) { // if battery less than 2.5V play Sound "Battery almost empty"
+  if(getBatterie() < 3.0) { // if battery less than 3V play Sound "Battery almost empty"
     strcpy(fileFilter,"B*");
     dly=11000;
   } else {
