@@ -4,8 +4,6 @@
 #include "WebServer.h"
 #include <ESPmDNS.h>
 
-//#include <DNSServer.h>
-
 #include <list>
 #include <LittleFS.h>
 
@@ -61,7 +59,6 @@ bool isConnected;
 unsigned long currentMillis;
 
 // Webserver
-//DNSServer dnsServer;
 WebServer server(80);
 
 // ULP Program, executed during deep sleep
@@ -267,8 +264,6 @@ void setup()
     delay(500);
 
     DEBUG_PRINTF("status=%d\n",WiFi.status());
-
-
 
     setupFS(); 
 
